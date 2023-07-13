@@ -1,0 +1,10 @@
+<h2>{{title}}</h2>
+<div class="trainings">
+  <ng-container *ngIf="fetchingTrainings; then displaySpinner else displayTrainings"></ng-container>
+  <ng-template #displaySpinner>
+    <app-multifit-spinner></app-multifit-spinner>
+  </ng-template>
+  <ng-template #displayTrainings>
+    <app-trainings-table [trainings]="trainings"></app-trainings-table>
+  </ng-template>
+</div>

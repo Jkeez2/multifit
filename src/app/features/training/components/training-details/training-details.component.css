@@ -1,0 +1,26 @@
+mat-card.card-general-informations {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i.fa-heartbeat {
+  color: #ff0000;
+}
+
+mat-card.card-heart-rate, mat-card.card-training-date, mat-card.card-training-duration {
+  border: none;
+  box-shadow: none;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-content.card-general-informations-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 4em;
+}

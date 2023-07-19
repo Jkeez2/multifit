@@ -8,7 +8,11 @@ import { Training } from "./features/training/models/training";
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const trainings = [
-      { id: 1, name: 'Muscu pec/triceps' },
+      { id: 1, name: 'Muscu pec/triceps', duration: '1h 04min', avgHeartRate: '125', date: '18/07/2023',
+      sports: [
+        { id: 1, name: 'workout'},
+        { id: 2, name: 'running'}
+      ]},
       { id: 2, name: 'Fractionné 30/30' },
       { id: 3, name: 'Séance jambes' },
       { id: 4, name: 'Séance dos/biceps' },

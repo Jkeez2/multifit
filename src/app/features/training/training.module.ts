@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TrainingsComponent } from './components/trainings/trainings.component';
+import { TrainingsListComponent } from './components/trainings-list/trainings-list.component';
 import { TrainingService } from "./services/training-service";
 import {TrainingsTableComponent} from "./components/trainings-table/trainings-table.component";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -10,14 +10,20 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {SharedModule} from "../../shared/shared.module";
 import {MatIconModule} from "@angular/material/icon";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { TrainingDetailsComponent } from './components/training-details/training-details.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { TrainingRoutingModule } from "./training-routing.module";
+import { TrainingsComponent } from './components/trainings/trainings.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
   declarations: [
-    TrainingsComponent,
-    TrainingsTableComponent
+    TrainingsListComponent,
+    TrainingsTableComponent,
+    TrainingDetailsComponent,
+    TrainingsComponent
   ],
   exports: [
     TrainingsComponent
@@ -31,7 +37,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatPaginatorModule,
     SharedModule,
     MatIconModule,
-    FontAwesomeModule
+    MatButtonModule,
+    MatTooltipModule,
+    TrainingRoutingModule,
+    MatCardModule
   ],
   providers: [
     TrainingService

@@ -47,4 +47,13 @@ export class TrainingService {
       return of(result as T);
     };
   }
+
+  getTraining(id: number): Observable<Training> {
+    const requestUrl = `${this.trainingsUrl}/${id}`;
+    return this.http.get<Training>(requestUrl)
+      .pipe(
+        tap(_ => console.log(`TrainingService: fetched training id=${id}`)),
+        catchError(this.handleError<Training>(`getTraining id=${id}`))
+      );
+  }
 }

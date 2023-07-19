@@ -11,7 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 // Imports for in-memory database
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -28,8 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    ),
-    FontAwesomeModule
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

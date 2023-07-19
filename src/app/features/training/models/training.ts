@@ -4,5 +4,7 @@ export interface Training {
   id: number,
   name: string,
   sports: ISport[],
-  duration: string
+  duration: string,
+  date: string,
+  avgHeartRate: number
 }

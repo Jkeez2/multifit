@@ -16,6 +16,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { TrainingRoutingModule } from "./training-routing.module";
 import { TrainingsComponent } from './components/trainings/trainings.component';
 import {MatCardModule} from "@angular/material/card";
+import { WorkoutComponent } from './components/workout/workout.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {MatCardModule} from "@angular/material/card";
     TrainingsListComponent,
     TrainingsTableComponent,
     TrainingDetailsComponent,
-    TrainingsComponent
+    TrainingsComponent,
+    WorkoutComponent
   ],
   exports: [
     TrainingsComponent

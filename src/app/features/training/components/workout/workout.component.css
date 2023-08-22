@@ -1,0 +1,13 @@
+mat-card.workout mat-card-header {
+  justify-content: center;
+}
+
+.card-workout-exercices {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, calc(50% - 10px));
+}
+
+.card-workout-exercice {
+  margin: 0;
+}

@@ -22,11 +22,11 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef mat-sort-header i18n> Actions </th>
       <td mat-cell *matCellDef="let row">
-        <button mat-mini-fab i18n-matTooltip matTooltip="Details" color="primary" i18n-aria-label aria-label="Example mini fab with a heart icon">
-          <a routerLink="/trainings/detail/{{row.id}}">
-            <mat-icon>visibility</mat-icon>
-          </a>
-        </button>
+        <a routerLink="/trainings/detail/{{row.id}}">
+          <button mat-mini-fab i18n-matTooltip matTooltip="Details" color="primary" i18n-aria-label aria-label="Example mini fab with a heart icon">
+              <mat-icon>visibility</mat-icon>
+          </button>
+        </a>
       </td>
     </ng-container>
 

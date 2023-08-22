@@ -1,3 +1,6 @@
+import { WorkoutSet } from "./workout-set";
+
 export interface WorkoutExercise {
-  name: string
+  name: string,
+  sets: WorkoutSet[]
 }

@@ -3,6 +3,12 @@
   <input matInput (keyup)="applyFilter($event)" i18n-placeholder placeholder="Filter by name, sport,..." #input>
 </mat-form-field>
 
+<a class="add-training" routerLink="/trainings/add">
+  <button mat-mini-fab i18n-matTooltip matTooltip="Add training" color="primary" i18n-aria-label aria-label="Add training icon">
+    <mat-icon>add</mat-icon>
+  </button>
+</a>
+
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 

@@ -5,6 +5,8 @@ import { Location } from '@angular/common';
 import { Training } from "../../models/training";
 import { TrainingService } from "../../services/training-service";
 
+import { Sports } from "../../enums/sports";
+
 @Component({
   selector: 'app-training-details',
   templateUrl: './training-details.component.html',
@@ -33,7 +35,5 @@ export class TrainingDetailsComponent implements OnInit {
       });
   }
 
-  goBack(): void {
-    this.location.back();
-  }
+  protected readonly Sports = Sports;
 }

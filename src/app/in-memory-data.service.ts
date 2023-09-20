@@ -10,7 +10,38 @@ export class InMemoryDataService implements InMemoryDbService {
     const trainings = [
       { id: 1, name: 'Muscu pec/triceps', duration: '1h 04min', avgHeartRate: '125', date: '18/07/2023',
       sports: [
-        { id: 1, name: 'workout'},
+        { id: 1, name: 'workout', exercices: [
+            { name: 'squat', sets: [
+                { weight: 70, reps: 10 },
+                { weight: 70, reps: 9 },
+                { weight: 70, reps: 8 },
+                { weight: 70, reps: 7 }
+              ]},
+            { name: 'curl biceps', sets: [
+                { weight: 20, reps: 10 },
+                { weight: 20, reps: 10 },
+                { weight: 20, reps: 9 },
+                { weight: 20, reps: 8 }
+              ]},
+            { name: 'fentes', sets: [
+                { weight: 15, reps: 10 },
+                { weight: 15, reps: 10 },
+                { weight: 15, reps: 10 },
+                { weight: 15, reps: 10 }
+              ]},
+            { name: 'lombaires machine', sets: [
+                { weight: 20, reps: 10 },
+                { weight: 20, reps: 10 },
+                { weight: 20, reps: 10 },
+                { weight: 20, reps: 10 }
+              ]},
+            { name: 'lever jambes avant', sets: [
+                { weight: 50, reps: 10 },
+                { weight: 50, reps: 10 },
+                { weight: 50, reps: 10 },
+                { weight: 50, reps: 10 }
+              ]}
+          ]},
         { id: 2, name: 'running'}
       ]},
       { id: 2, name: 'Fractionné 30/30' },

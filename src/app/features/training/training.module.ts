@@ -16,6 +16,9 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { TrainingRoutingModule } from "./training-routing.module";
 import { TrainingsComponent } from './components/trainings/trainings.component';
 import {MatCardModule} from "@angular/material/card";
+import { WorkoutComponent } from './components/workout/workout.component';
+import { AddEditTrainingComponent } from './components/add-edit-training/add-edit-training.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import {MatCardModule} from "@angular/material/card";
     TrainingsListComponent,
     TrainingsTableComponent,
     TrainingDetailsComponent,
-    TrainingsComponent
+    TrainingsComponent,
+    WorkoutComponent,
+    AddEditTrainingComponent
   ],
   exports: [
     TrainingsComponent
@@ -40,7 +45,8 @@ import {MatCardModule} from "@angular/material/card";
     MatButtonModule,
     MatTooltipModule,
     TrainingRoutingModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [
     TrainingService

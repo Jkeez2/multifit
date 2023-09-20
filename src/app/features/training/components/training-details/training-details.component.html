@@ -1,7 +1,11 @@
 <div *ngIf="training">
+  <a routerLink="/trainings">
+    <button mat-button i18n-matTooltip matTooltip="Go back" i18n-aria-label aria-label="Back button">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+  </a>
   <div class="training-details">
     <h2>{{training.name}}</h2>
-
     <mat-card class="card-general-informations">
       <mat-card-header>
         <mat-card-title i18n>General informations</mat-card-title>
@@ -25,6 +29,15 @@
         </mat-card>
       </mat-card-content>
     </mat-card>
-    
+    <ng-container *ngFor="let sport of training.sports">
+      <ng-container [ngSwitch]="sport.name">
+        <ng-container *ngSwitchCase="Sports.WORKOUT">
+          <app-workout [workoutTraining]="$any(sport)"></app-workout>
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+          <p>Sport non pris en charge</p>
+        </ng-container>
+      </ng-container>
+    </ng-container>
   </div>
 </div>
